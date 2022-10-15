@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <title>Subanutica - Gameplay</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/style.css">
+    <link rel="stylesheet" href="../../css/Gameplay/Energia - Bases.css">
+    <link rel="icon" href="../../multimidia/icone1.png" id="iconaba">
+    <script src="../../JavaScript/script.js " defer></script>
+     <!--https://getbootstrap.com/docs/5.1/-->
+<body class="bg-dark" id="body">
+    <nav class="navPrincipal">
+        <figure>
+            <a href="../index.html" rel="prev"><img src="../../multimidia/Logo.png" alt="Logo subnautica" width="20%"></a>
+        </figure>
+        <ul class="nav justify-content-center nav-pills ms-5" >
+            <li class="nav-item fs-4"><a class="nav-link" href="../index.html" rel="prev">Home</a></li>
+            <li class="nav-item  fs-4 dropdown">
+                <a class="nav-link dropdown-toggle  border-bottom border-5 border-light" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Gameplay</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item fs-4" href="../Gameplay/Modos de Jogo.html" rel="next">Modos de Jogo</a></li>
+                    <li><a class="dropdown-item fs-4" href="../Gameplay/Status de Saúde.html" rel="next">Status de Saúde</a></li>
+                    <li><a class="dropdown-item fs-4" href="../Gameplay/Bases.html" rel="next">Bases</a></li>
+                    <li><a class="dropdown-item fs-4 Selec" href="../Gameplay/Energia.html" rel="next">Energia Elétrica</a></li>
+                </ul>
+            </li>
+            <li class="nav-item  fs-4 dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Mundo</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item fs-4" href="../Mundo/Biomas.html" rel="next">Biomas</a></li>
+                    <li><a class="dropdown-item fs-4" href="../Mundo/Fauna.html" rel="next">Fauna</a></li>
+                    <li><a class="dropdown-item fs-4" href="../Mundo/Flora.html" rel="next">Flora</a></li>
+                </ul>
+            </li>
+            <li class="nav-item fs-4"><a class="nav-link" href="../Crafting/Crafting.html" rel="next">Crafting</a></li>
+            <li class="nav-item  fs-4 dropdown">
+                <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button" aria-expanded="false">Sobre</a>
+                <ul class="dropdown-menu">
+                    <li><a class="dropdown-item fs-4" href="../Sobre/Sobre o Jogo.html" rel="next">Sobre o Jogo</a></li>
+                    <li><a class="dropdown-item fs-4" href="../../Sobre.html/Sobre.html" rel="next">Sobre.html</a></li>
+                </ul>
+            </li>
+            <li class="nav-item fs-4 navSUBouBLZ d-flex flex-row-reverse bd-highlight me-5">
+                <div>
+                    <button class="nav-link active border-0" onclick="SUBouBLZ()">
+                        Mudar
+                    </button>
+                </div>
+            </li>
+        </ul>
+    </nav>
+    <header class="header">
+        <h1 id="tituloh1">ENERGIA ELÉTRICA</h1>
+        <svg class="ondas" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+            <path class="Onda1" fill="hsla(0, 0%, 5%, 1)" fill-opacity="0.875" d="M0,64L60,74.7C120,85,240,107,360,96C480,85,600,43,720,53.3C840,64,960,128,1080,138.7C1200,149,1320,107,1380,85.3L1440,64L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+            <path class="Onda2" fill=" rgb(6, 6, 6)" fill-opacity="0.9" d="M0,160L48,170.7C96,181,192,203,288,176C384,149,480,75,576,58.7C672,43,768,85,864,128C960,171,1056,213,1152,213.3C1248,213,1344,171,1392,149.3L1440,128L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path>
+            <path class="Onda3" fill="hsla(0, 0%, 0%)" fill-opacity="1" d="M0,192L60,170.7C120,149,240,107,360,117.3C480,128,600,192,720,186.7C840,181,960,107,1080,96C1200,85,1320,139,1380,165.3L1440,192L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z"></path>
+        </svg>
+    </header>
+    <section class="pb-5">
+        <div>
+            <article class="container my-5 box bg-dark p-5">
+                <h5 class="titulo5 fs-2" >Consumo de Energia das bases</h5>
+                <br>
+                <p class="texto">As Bases marítimas requerem energia para produzir ar respirável e para alimentar aparelhos como o Fabricator, Carregador de Célula de energia e Carregador de baterias.</p>
+
+                <p class="texto">As bases marítimas consumirão energia de geradores internos (biorreatores ou reatores nucleares) instalados dentro da base e de quaisquer geradores externos (painéis solares ou usinas térmicas) dentro da faixa de transmissão de energia. A transmissão de energia é representada por uma fina linha azul brilhante que conecta um gerador externo à base. O Transmissor de Potência pode ser usado para conectar geradores a bases em distâncias maiores. A energia é extraída primeiro do gerador mais antigo, independentemente do tipo de gerador. Cada gerador trabalhará para preencher sua própria capacidade de armazenamento interno e não preencherá a capacidade de outros geradores.</p>
+            </article> 
+            <hr>
+            <article class="container mt-5 Tamtabela" >
+                <div class="Tabela" id="TabelaSUB">
+                    <table class="table table-light table-sm">
+                        <thead class="table-dark">
+                            <tr>
+                                <th scope="col">Geradores de Energia</th>
+                            </tr>
+                        </thead>
+                        <tbody class="align-middle">
+                            <tr>
+                                <td>
+                                    <table class="table mb-0 table-bordered align-middle" >
+                                        <thead>
+                                            <tr class="table-dark">
+                                                <th scope="col" colspan="4">Bioreactor</th>
+                                            </tr>
+                                            <tr class="table-secondary">
+                                                <th scope="col">Imagem</th>
+                                                <th scope="col">Descrição</th>
+                                                <th scope="col">Fonte de enrgia</th>
+                                                <th scope="col">Capacidade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody  class="table-light">
+                                            <tr>
+                                                <td>
+                                                    <figure>
+                                                        <img src="../../multimidia/Bioreactor.png" alt="Bioreactor">
+                                                    </figure>
+                                                </td>
+                                                <td>
+                                                    <p>Transforma materia organica em energia elétrica</p>
+                                                </td>
+                                                <td>
+                                                    <p>Matéria Orgânica(plantas e animais)</p>
+                                                </td>
+                                                <td>
+                                                    500
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <table class="table mb-0 table-bordered align-middle" >
+                                        <thead>
+                                            <tr class="table-dark">
+                                                <th scope="col" colspan="4">Nuclear Reactor</th>
+                                            </tr>
+                                            <tr class="table-secondary">
+                                                <th scope="col">Imagem</th>
+                                                <th scope="col">Descrição</th>
+                                                <th scope="col">Fonte de enrgia</th>
+                                                <th scope="col">Capacidade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody  class="table-light">
+                                            <tr>
+                                                <td>
+                                                    <figure>
+                                                        <img src="../../multimidia/NuclearReactor.png" alt="Nuclear Reactor">
+                                                    </figure>
+                                                </td>
+                                                <td>
+                                                    <p>Processa nuclear reactor rods para gerar energia elétrica</p>
+                                                </td>
+                                                <td>
+                                                    <p>Fissão Nuclear</p>
+                                                </td>
+                                                <td>
+                                                    2500
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <table class="table mb-0 table-bordered align-middle" >
+                                        <thead>
+                                            <tr class="table-dark">
+                                                <th scope="col" colspan="4">Solar Panel</th>
+                                            </tr>
+                                            <tr class="table-secondary">
+                                                <th scope="col">Imagem</th>
+                                                <th scope="col">Descrição</th>
+                                                <th scope="col">Fonte de enrgia</th>
+                                                <th scope="col">Capacidade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody  class="table-light">
+                                            <tr>
+                                                <td>
+                                                    <figure>
+                                                        <img src="../../multimidia/SolarPanel.png" alt="Solar Panel">
+                                                    </figure>
+                                                </td>
+                                                <td>
+                                                    <p>Capta a luz solar e transforma em energia elétrica.</p>
+                                                </td>
+                                                <td>
+                                                    <p>Luz solar</p>
+                                                </td>
+                                                <td>
+                                                    75
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+
+                            <tr>
+                                <td>
+                                    <table class="table mb-0 table-bordered align-middle" >
+                                        <thead>
+                                            <tr class="table-dark">
+                                                <th scope="col" colspan="4">Thermal Plant</th>
+                                            </tr>
+                                            <tr class="table-secondary">
+                                                <th scope="col">Imagem</th>
+                                                <th scope="col">Descrição</th>
+                                                <th scope="col">Fonte de enrgia</th>
+                                                <th scope="col">Capacidade</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody  class="table-light">
+                                            <tr>
+                                                <td>
+                                                    <figure>
+                                                        <img src="../../multimidia/Bioreactor.png" alt="Thermal Plant">
+                                                    </figure>
+                                                </td>
+                                                <td>
+                                                    <p>Capta calor e transforma em energia elétrica.</p>
+                                                </td>
+                                                <td>
+                                                    <p>Calor (acima de 25°C)</p>
+                                                </td>
+                                                <td>
+                                                    250
+                                                </td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </article>
+            <hr class="hr border border-5 mx-auto my-5" width="100%">
+        </div>
+    </section>
+    <footer class=" text-white bg-dark mt-5">
+        <div class=" container mx-auto row gap gap-2">
+            <div class="col">
+                <button onclick="Top()" class="bg-transparent border-0">
+                    <figure>
+                        <img src="../../multimidia/footer1.png" alt="SUBNAUTICA" height="150px" id="footerimg">
+                    </figure>
+                </button>
+            </div>
+            <div class="col border-end border-2 border-light py-2">
+                <h5 class="titulo5">Contato:</h5>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 24 24" fill="whitesmoke">    
+                            <path d="M 12.011719 2 C 6.5057187 2 2.0234844 6.478375 2.0214844 11.984375 C 2.0204844 13.744375 2.4814687 15.462563 3.3554688 16.976562 L 2 22 L 7.2324219 20.763672 C 8.6914219 21.559672 10.333859 21.977516 12.005859 21.978516 L 12.009766 21.978516 C 17.514766 21.978516 21.995047 17.499141 21.998047 11.994141 C 22.000047 9.3251406 20.962172 6.8157344 19.076172 4.9277344 C 17.190172 3.0407344 14.683719 2.001 12.011719 2 z M 12.009766 4 C 14.145766 4.001 16.153109 4.8337969 17.662109 6.3417969 C 19.171109 7.8517969 20.000047 9.8581875 19.998047 11.992188 C 19.996047 16.396187 16.413812 19.978516 12.007812 19.978516 C 10.674812 19.977516 9.3544062 19.642812 8.1914062 19.007812 L 7.5175781 18.640625 L 6.7734375 18.816406 L 4.8046875 19.28125 L 5.2851562 17.496094 L 5.5019531 16.695312 L 5.0878906 15.976562 C 4.3898906 14.768562 4.0204844 13.387375 4.0214844 11.984375 C 4.0234844 7.582375 7.6067656 4 12.009766 4 z M 8.4765625 7.375 C 8.3095625 7.375 8.0395469 7.4375 7.8105469 7.6875 C 7.5815469 7.9365 6.9355469 8.5395781 6.9355469 9.7675781 C 6.9355469 10.995578 7.8300781 12.182609 7.9550781 12.349609 C 8.0790781 12.515609 9.68175 15.115234 12.21875 16.115234 C 14.32675 16.946234 14.754891 16.782234 15.212891 16.740234 C 15.670891 16.699234 16.690438 16.137687 16.898438 15.554688 C 17.106437 14.971687 17.106922 14.470187 17.044922 14.367188 C 16.982922 14.263188 16.816406 14.201172 16.566406 14.076172 C 16.317406 13.951172 15.090328 13.348625 14.861328 13.265625 C 14.632328 13.182625 14.464828 13.140625 14.298828 13.390625 C 14.132828 13.640625 13.655766 14.201187 13.509766 14.367188 C 13.363766 14.534188 13.21875 14.556641 12.96875 14.431641 C 12.71875 14.305641 11.914938 14.041406 10.960938 13.191406 C 10.218937 12.530406 9.7182656 11.714844 9.5722656 11.464844 C 9.4272656 11.215844 9.5585938 11.079078 9.6835938 10.955078 C 9.7955938 10.843078 9.9316406 10.663578 10.056641 10.517578 C 10.180641 10.371578 10.223641 10.267562 10.306641 10.101562 C 10.389641 9.9355625 10.347156 9.7890625 10.285156 9.6640625 C 10.223156 9.5390625 9.737625 8.3065 9.515625 7.8125 C 9.328625 7.3975 9.131125 7.3878594 8.953125 7.3808594 C 8.808125 7.3748594 8.6425625 7.375 8.4765625 7.375 z"></path>
+                        </svg>
+                        +55 (16) 99268-3442<!--Telefone Falso-->
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 30 30" fill="whitesmoke
+                        ">
+                            <path d="M 25.154297 3.984375 C 24.829241 3.998716 24.526384 4.0933979 24.259766 4.2011719 C 24.010014 4.3016357 23.055766 4.7109106 21.552734 5.3554688 C 20.048394 6.0005882 18.056479 6.855779 15.931641 7.7695312 C 11.681964 9.5970359 6.9042108 11.654169 4.4570312 12.707031 C 4.3650097 12.746607 4.0439208 12.849183 3.703125 13.115234 C 3.3623292 13.381286 3 13.932585 3 14.546875 C 3 15.042215 3.2360676 15.534319 3.5332031 15.828125 C 3.8303386 16.121931 4.144747 16.267067 4.4140625 16.376953 C 5.3912284 16.775666 8.4218473 18.015862 8.9941406 18.25 C 9.195546 18.866983 10.29249 22.222526 10.546875 23.044922 C 10.714568 23.587626 10.874198 23.927519 11.082031 24.197266 C 11.185948 24.332139 11.306743 24.45034 11.453125 24.542969 C 11.511635 24.579989 11.575789 24.608506 11.640625 24.634766 L 11.644531 24.636719 C 11.659471 24.642719 11.67235 24.652903 11.6875 24.658203 C 11.716082 24.668202 11.735202 24.669403 11.773438 24.677734 C 11.925762 24.726927 12.079549 24.757812 12.216797 24.757812 C 12.80196 24.757814 13.160156 24.435547 13.160156 24.435547 L 13.181641 24.419922 L 16.191406 21.816406 L 19.841797 25.269531 C 19.893193 25.342209 20.372542 26 21.429688 26 C 22.057386 26 22.555319 25.685026 22.875 25.349609 C 23.194681 25.014192 23.393848 24.661807 23.478516 24.21875 L 23.478516 24.216797 C 23.557706 23.798129 26.921875 6.5273437 26.921875 6.5273438 L 26.916016 6.5507812 C 27.014496 6.1012683 27.040303 5.6826405 26.931641 5.2695312 C 26.822973 4.8564222 26.536648 4.4608905 26.181641 4.2480469 C 25.826669 4.0352506 25.479353 3.9700339 25.154297 3.984375 z M 24.966797 6.0742188 C 24.961997 6.1034038 24.970391 6.0887279 24.962891 6.1230469 L 24.960938 6.1347656 L 24.958984 6.1464844 C 24.958984 6.1464844 21.636486 23.196371 21.513672 23.845703 C 21.522658 23.796665 21.481573 23.894167 21.439453 23.953125 C 21.379901 23.91208 21.257812 23.859375 21.257812 23.859375 L 21.238281 23.837891 L 16.251953 19.121094 L 12.726562 22.167969 L 13.775391 17.96875 C 13.775391 17.96875 20.331562 11.182109 20.726562 10.787109 C 21.044563 10.471109 21.111328 10.360953 21.111328 10.251953 C 21.111328 10.105953 21.035234 10 20.865234 10 C 20.712234 10 20.506484 10.14875 20.396484 10.21875 C 18.963383 11.132295 12.671823 14.799141 9.8515625 16.439453 C 9.4033769 16.256034 6.2896636 14.981472 5.234375 14.550781 C 5.242365 14.547281 5.2397349 14.548522 5.2480469 14.544922 C 7.6958673 13.491784 12.47163 11.434667 16.720703 9.6074219 C 18.84524 8.6937992 20.838669 7.8379587 22.341797 7.1933594 C 23.821781 6.5586849 24.850125 6.1218894 24.966797 6.0742188 z"></path>
+                        </svg>
+                        +55 (16) 99268-3442<!--Telefone Falso-->
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50" fill="whitesmoke">
+                            <path d="M 14 4 C 8.4886661 4 4 8.4886661 4 14 L 4 36 C 4 41.511334 8.4886661 46 14 46 L 36 46 C 41.511334 46 46 41.511334 46 36 L 46 14 C 46 8.4886661 41.511334 4 36 4 L 14 4 z M 14 6 L 36 6 C 40.430666 6 44 9.5693339 44 14 L 44 36 C 44 40.430666 40.430666 44 36 44 L 14 44 C 9.5693339 44 6 40.430666 6 36 L 6 14 C 6 9.5693339 9.5693339 6 14 6 z M 13 15 C 11.35503 15 10 16.35503 10 18 L 10 32 C 10 33.64497 11.35503 35 13 35 L 37 35 C 38.64497 35 40 33.64497 40 32 L 40 18 C 40 16.35503 38.64497 15 37 15 L 13 15 z M 13.414062 17 L 36.583984 17 L 27.677734 25.892578 C 26.18494 27.382984 23.796834 27.382819 22.304688 25.890625 L 13.414062 17 z M 38 18.412109 L 38 31.587891 L 31.402344 25 L 38 18.412109 z M 12 18.414062 L 18.585938 25 L 12 31.585938 L 12 18.414062 z M 29.988281 26.412109 L 36.585938 33 L 13.414062 33 L 20 26.414062 L 20.890625 27.304688 C 23.146478 29.56054 26.832638 29.562194 29.089844 27.308594 L 29.988281 26.412109 z"></path>
+                        </svg>
+                        arthurazorli.cont@gmail.com <!--E-mail Falso-->
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 50 50" fill="whitesmoke">
+                            <path d="M 29.699219 47 C 29.578125 47 29.457031 46.976563 29.339844 46.933594 C 29.089844 46.835938 28.890625 46.644531 28.78125 46.398438 L 22.945313 32.90625 L 15.683594 39.730469 C 15.394531 40.003906 14.96875 40.074219 14.601563 39.917969 C 14.238281 39.761719 14 39.398438 14 39 L 14 6 C 14 5.601563 14.234375 5.242188 14.601563 5.082031 C 14.964844 4.925781 15.390625 4.996094 15.683594 5.269531 L 39.683594 27.667969 C 39.972656 27.9375 40.074219 28.355469 39.945313 28.726563 C 39.816406 29.101563 39.480469 29.363281 39.085938 29.398438 L 28.902344 30.273438 L 35.007813 43.585938 C 35.117188 43.824219 35.128906 44.101563 35.035156 44.351563 C 34.941406 44.601563 34.757813 44.800781 34.515625 44.910156 L 30.113281 46.910156 C 29.980469 46.96875 29.84375 47 29.699219 47 Z"></path>
+                        </svg>
+                        <a href="#" rel="external">https://www.arthurazorli.com/</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col border-end border-2 border-light py-2">
+                <h5 class="titulo5">Redes Sociais:</h5>
+                <ul>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 24 24" fill="whitesmoke">    
+                            <path d="M 8 3 C 5.243 3 3 5.243 3 8 L 3 16 C 3 18.757 5.243 21 8 21 L 16 21 C 18.757 21 21 18.757 21 16 L 21 8 C 21 5.243 18.757 3 16 3 L 8 3 z M 8 5 L 16 5 C 17.654 5 19 6.346 19 8 L 19 16 C 19 17.654 17.654 19 16 19 L 8 19 C 6.346 19 5 17.654 5 16 L 5 8 C 5 6.346 6.346 5 8 5 z M 17 6 A 1 1 0 0 0 16 7 A 1 1 0 0 0 17 8 A 1 1 0 0 0 18 7 A 1 1 0 0 0 17 6 z M 12 7 C 9.243 7 7 9.243 7 12 C 7 14.757 9.243 17 12 17 C 14.757 17 17 14.757 17 12 C 17 9.243 14.757 7 12 7 z M 12 9 C 13.654 9 15 10.346 15 12 C 15 13.654 13.654 15 12 15 C 10.346 15 9 13.654 9 12 C 9 10.346 10.346 9 12 9 z"></path>
+                        </svg>
+                        <a href="https://www.instagram.com/subnautica/" rel="external">Instagram</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 30 30"fill="whitesmoke">    
+                            <path d="M28,6.937c-0.957,0.425-1.985,0.711-3.064,0.84c1.102-0.66,1.947-1.705,2.345-2.951c-1.03,0.611-2.172,1.055-3.388,1.295 c-0.973-1.037-2.359-1.685-3.893-1.685c-2.946,0-5.334,2.389-5.334,5.334c0,0.418,0.048,0.826,0.138,1.215 c-4.433-0.222-8.363-2.346-10.995-5.574C3.351,6.199,3.088,7.115,3.088,8.094c0,1.85,0.941,3.483,2.372,4.439 c-0.874-0.028-1.697-0.268-2.416-0.667c0,0.023,0,0.044,0,0.067c0,2.585,1.838,4.741,4.279,5.23 c-0.447,0.122-0.919,0.187-1.406,0.187c-0.343,0-0.678-0.034-1.003-0.095c0.679,2.119,2.649,3.662,4.983,3.705 c-1.825,1.431-4.125,2.284-6.625,2.284c-0.43,0-0.855-0.025-1.273-0.075c2.361,1.513,5.164,2.396,8.177,2.396 c9.812,0,15.176-8.128,15.176-15.177c0-0.231-0.005-0.461-0.015-0.69C26.38,8.945,27.285,8.006,28,6.937z"></path>
+                        </svg>
+                        <a href="https://twitter.com/subnautica" rel="external">Twitter</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 30 30"fill="whitesmoke">    
+                            <path d="M15,3C8.373,3,3,8.373,3,15c0,6.016,4.432,10.984,10.206,11.852V18.18h-2.969v-3.154h2.969v-2.099c0-3.475,1.693-5,4.581-5 c1.383,0,2.115,0.103,2.461,0.149v2.753h-1.97c-1.226,0-1.654,1.163-1.654,2.473v1.724h3.593L19.73,18.18h-3.106v8.697 C22.481,26.083,27,21.075,27,15C27,8.373,21.627,3,15,3z"></path>
+                        </svg>
+                        <a href="https://pt-br.facebook.com/subnautica/" rel="external">Facebbok</a>
+                    </li>
+                    <li>
+                        <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="25" height="25" viewBox="0 0 48 48" fill="black">
+                            <path fill="whitesmoke" d="M43.2,33.9c-0.4,2.1-2.1,3.7-4.2,4c-3.3,0.5-8.8,1.1-15,1.1c-6.1,0-11.6-0.6-15-1.1c-2.1-0.3-3.8-1.9-4.2-4C4.4,31.6,4,28.2,4,24c0-4.2,0.4-7.6,0.8-9.9c0.4-2.1,2.1-3.7,4.2-4C12.3,9.6,17.8,9,24,9c6.2,0,11.6,0.6,15,1.1c2.1,0.3,3.8,1.9,4.2,4c0.4,2.3,0.9,5.7,0.9,9.9C44,28.2,43.6,31.6,43.2,33.9z"></path>
+                            <path fill="black" d="M20 31L20 17 32 24z"></path>
+                        </svg>
+                        <a href="#" rel="external">Youtube</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col py-2">
+                <h5 class="titulo5">Fontes:</h5>
+                <ul>
+                    <li><a href="https://store.steampowered.com/app/264710/Subnautica/" rel="external" id="Steam">Steam</a></li>
+                    <li><a href="https://subnautica.fandom.com/wiki/Subnautica_Wiki" rel="external" id="Fandom">Fandom</a></li>
+                    <li><a href="https://pt.wikipedia.org/wiki/Subnautica" rel="external" id="Wikipédia">Wikipédia</a></li>
+                    <li><a href="https://subnauticamap.io" rel="external" id="Subnautica.io">SubnauticaMap.io</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>Copyright © 2022 Arthur Azorli - Todos os direitos reservados</p>
+    </footer>
+
+    
+    
+    <!--Pop up-->
+    <!--Mudar entre os jogos-->
+    <div class="SUBouBLZ border border-3 Box-shadow"  id="botões-s-b">
+        <div class="d-flex flex-row-reverse bd-highlight me-2">
+            <button class="border-0 mt-1 ms-1 bg-transparent" onclick="SUBouBLZclose()">
+                <span class="material-icons">close</span>
+            </button>
+        </div>
+        <div class="row p-5 pt-3">
+            <div class="col m-2">
+                <button class="bg-transparent container justify-content-center border border-3 ratio ratio-1x1 Box-shadow" id="SUBouBLZSbutton" onclick="Subnautica()"></button>
+            </div>
+            <div class="col m-2">
+                <button class="bg-transparent justify-content-center container border border-3 ratio ratio-1x1 Box-shadow" id="SUBouBLZBbutton" onclick="BelowZero()"></button>
+            </div>
+        </div>
+    </div>
+    <!--Avaliação-->
+    <!--<div class="estrelas">
+        <input type="radio" id="cm_star-empty" name="fb" value="" checked/>
+        <label for="cm_star-1"><i class="fa"></i></label>
+        <input type="radio" id="cm_star-1" name="fb" value="1"/>
+        <label for="cm_star-2"><i class="fa"></i></label>
+        <input type="radio" id="cm_star-2" name="fb" value="2"/>
+        <label for="cm_star-3"><i class="fa"></i></label>
+        <input type="radio" id="cm_star-3" name="fb" value="3"/>
+        <label for="cm_star-4"><i class="fa"></i></label>
+        <input type="radio" id="cm_star-4" name="fb" value="4"/>
+        <label for="cm_star-5"><i class="fa"></i></label>
+        <input type="radio" id="cm_star-5" name="fb" value="5"/>
+      </div>-->
+
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js" integrity="sha384-SR1sx49pcuLnqZUnnPwx6FCym0wLsk5JZuNx2bPPENzswTNFaQU1RDvt3wT4gWFG" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.min.js" integrity="sha384-j0CNLUeiqtyaRmlzUHCPZ+Gy5fQu0dQ6eZ/xAww941Ai1SxSY+0EQqNXNE6DZiVc" crossorigin="anonymous"></script>
+</body>
+</html>
+</html>

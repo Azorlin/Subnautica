@@ -1,0 +1,67 @@
+.TabelaNONE{
+    display: none;
+}
+
+.Tamtabela{
+    width: 650px !important; 
+}
+
+table img{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out;
+}
+
+table img:hover{
+
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+table th{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out;
+}
+
+table .table-dark{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out;
+}
+
+table .table-dark:hover{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out;
+    transform: scale(1.05);
+}
+
+.box{
+    border-radius: 20px;
+}
+
+.box .texto:hover{
+    transform: scale(1.05);
+}
+
+.nav-tabs .active{
+    background-color: #fff !important;
+    color: black !important;
+}
+
+.nav-link{
+    font-weight: bolder !important;
+}

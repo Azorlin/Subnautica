@@ -1,0 +1,52 @@
+.plataformas{
+    background-color: black;
+    border-radius: 10px;
+    width: 400px;
+}
+
+.plataformas svg{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.plataformas svg:hover{
+    transform: scale(1.2);
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+}
+
+#Premiações img{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out;
+}
+
+#Premiações img:hover{
+    transform: scale(1.2);
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out;
+}
+
+.estrelas input[type=radio] {
+    display: none;
+}
+
+.estrelas label i.fa:before {
+    content:'\f005';
+    color: #FC0;
+}
+
+.estrelas input[type=radio]:checked ~ label i.fa:before {
+    color: #CCC;
+}

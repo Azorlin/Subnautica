@@ -1,0 +1,22 @@
+table tr{
+    border: 5px;
+    border-color: black !important;
+}
+
+table{
+    border-radius: 20px !important;
+}
+
+#capa{
+    border: 5px;
+    border-color: whitesmoke !important; 
+    border-radius: 20px;
+}
+
+.box{
+    border-radius: 20px;
+}
+
+.box .texto:hover{
+    transform: scale(1.05);
+}

@@ -1,0 +1,321 @@
+@font-face {
+    font-family: ArialNova;
+    src: url(../Fontes/arial-nova.ttf);
+}
+
+@font-face {
+    font-family: Titulo;
+    src: url(../Fontes/DaysOne-Regular.ttf);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: ArialNova, Arial, Helvetica, sans-serif;
+    
+}
+  
+body{
+    position: relative;
+    bottom: 50px;
+}
+
+header, section{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+   
+}
+
+header{
+    position: relative;
+    background-size: 100%;
+    background-position-x: center;
+    background-position-y: top;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+h1{
+    border: 5px solid white;
+    padding: 10px 50px;
+    color: #fff;
+    position: relative;
+    bottom: 20%;
+    max-width: 1000px;
+    font-size: 100px;
+    font-family: Titulo, ArialNova, Arial, Helvetica, sans-serif;
+}
+
+.header{
+    background-image: linear-gradient(to bottom, black, transparent 35%, black), url(../multimidia/background\ 1.png);
+}
+
+.header2{
+    background-image: linear-gradient(to bottom, black, transparent 35%, black), url(../multimidia/background\ 2.png);
+}
+
+.ondas{
+    position: absolute;
+    right: 0px;
+    left: 0px;
+    bottom: 0px;
+}
+
+.Onda1{
+ animation: moveOnda1 3s ease-in-out infinite alternate;
+ z-index: 80
+ 
+}
+
+@keyframes moveOnda1{
+    from{
+        transform: translateX(-50px);
+        transform: scale(1.5);
+    }
+}
+
+.Onda2{
+    animation: moveOnda1 3s 1.2s ease-in-out infinite alternate;
+   }
+   
+@keyframes moveOnda2{
+    from{
+        transform: translateX(-30px);
+    }
+}
+
+.Onda3{
+    animation: moveOnda1 3s 0.7s ease-in-out infinite alternate;
+   }
+   
+@keyframes moveOnda3{
+    from{
+        transform: translateX(-20px);
+    }
+}
+
+nav a{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+}
+
+nav a:hover{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+    transform: scale(1.1);
+}
+
+nav button{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+}
+
+nav button:hover{
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+    transform: scale(1.1);
+}
+
+nav ul ul a:hover{
+    transform: none;
+}
+
+.navPrincipal{
+    background-color: black;
+}
+
+.navPrincipal ul{
+    z-index: 90;
+}
+
+.navPrincipal a{
+    color: whitesmoke;
+}
+
+.navPrincipal ul ul a{
+    color:black;
+}
+
+.navPrincipal img{
+    z-index: 100;
+    transform: translate(15%, 65px);
+}
+
+section{
+    background: hsla(0, 0%, 0%);
+    background: linear-gradient(270deg, hsla(0, 0%, 0%) 20%, hsla(0, 0%, 10%, 1) 80%);
+    background: -moz-linear-gradient(270deg, hsla(0, 0%, 0%) 20%, hsla(0, 0%, 10%, 1) 80%);
+    background: -webkit-linear-gradient(270deg, hsla(0, 0%, 0%) 20%, hsla(0, 0%, 10%, 1) 80%);
+    filter: progid: DXImageTransform.Microsoft.gradient( startColorstr="#070707", endColorstr="#191919", GradientType=1 );
+    color: whitesmoke;
+    width: 100%;
+}
+
+.texto{
+    font-size: 18px;
+    text-align: justify;
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.texto:hover{
+    transform: scale(1.1);
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.titulo3{
+    font-size: 48px;
+    font-family: Titulo, ArialNova, Arial, Helvetica, sans-serif;
+}
+
+.titulo5{
+    color: rgb(255, 156, 35);
+    font-size: 22px;
+    font-family: Titulo, ArialNova, Arial, Helvetica, sans-serif;
+}
+
+.subtitulo3{
+    font-size: 25px;
+    color: rgb(167, 167, 167);
+    font-family: Titulo, ArialNova, Arial, Helvetica, sans-serif;
+    
+}
+
+.video{
+    border-radius: 10px;
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out;
+}
+
+.video:hover{
+    transform: scale(1.1);
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.5s ease-in-out; 
+}
+
+.hr{
+    background-color: whitesmoke;
+    height: 1.5px;
+    border-radius: 20px;
+    border-color: whitesmoke;
+}
+
+
+
+#botões-s-b button{
+    border-radius: 20px;
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.4s ease-in-out;
+}
+
+#botões-s-b button:hover{
+    transform: scale(1.1);
+    -webkit-transition: 0.5s linear 0.1s;
+    -moz-transition: 0.5s linear 0.1s;
+    -o-transition: 0.5s linear 0.1s;
+    transition: 0.5s linear 0.1s;
+    transition: transform 0.4s ease-in-out;
+}
+
+.SUBouBLZ{
+    display: block;
+    border-radius: 10px;
+    width: 60%;
+    z-index: 1000;
+    position: fixed;
+    top: 12%;
+    right: 5%;
+    left: 5%;
+    background-color: whitesmoke;
+    margin: 0 auto;
+}
+
+.navSUBouBLZ{
+    position: relative;
+    
+}
+
+.PopupClose{
+    display: none;
+}
+
+#SUBouBLZSbutton{
+    background-image: url(../multimidia/Capa1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+#SUBouBLZBbutton{
+    background-image: url(../multimidia/Capa2.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.Box-shadow{
+    box-shadow: 10px 12px 26px -6px rgba(0,0,0,0.75);
+}
+
+.Selec{
+    background-color: rgb(167, 167, 167);
+}
+
+.carousel img{
+    border-color: whitesmoke;
+    border-radius: 20px;
+}
+
+footer ul{
+    list-style: none;
+}
+
+footer li{
+    position: relative;
+    right: 30px;
+}
+
+footer a{
+    color: whitesmoke;
+    text-decoration: none;
+}
+
+
+footer p{
+    text-align: end;
+    position: relative;
+    top: 40px;
+    right: 100px;
+}
+    
